@@ -1,0 +1,53 @@
+
+/* Diagonal NavBar Style!!*/
+
+nav ul {
+  font-size: 50%;
+  list-style: none;
+  margin: 0;
+  padding: 12px 0px 0 331px;
+  text-align: center;
+}
+nav li {
+  display: inline-block;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+nav a {
+	text-decoration: none;
+  display: block;
+  color: #121212;
+  transition: all 0.5s;
+}
+nav a:hover {
+  color: #12242d;
+  background-color: white;
+  /* make it glow! */
+  -webkit-box-shadow: 0px 0px 4px #4195fc;
+  -moz-box-shadow: 0px 0px 4px #4195fc;
+  box-shadow: 0px 0px 4px #4195fc;
+}
+nav span {
+  display: block;
+}
+
+@media all and (min-width: 690px) {
+  nav li {
+    margin: 0;
+    transform: skewX(-10deg);
+  }
+  nav a {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #121212;
+  }
+  nav a:hover {
+    color: #8FBAC8;
+    background-color: white;
+  }
+  nav span {
+    transform: skewX(10deg);
+  }
+}
+
+/* Fin Diagonal NavBar Style!!*/

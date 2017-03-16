@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>Dharma Shala</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+</head>
+<body>
+	<section class="row">
+		<header class="col-12">
+			<nav>
+			  <ul>
+			    <li><a href="/"><span>Inicio</span></a></li>
+			    <li><a href="musica.html"><span>Música</span></a></li>
+			    <li><a href="#"><span>Descargas</span></a></li>
+			    <li><a href="#"><span>Articles</span></a></li>
+			    <li><a href="#"><span>Resources</span></a></li>
+			    <li><a href="#"><span>Calendario</span></a></li>
+			  </ul>
+			</nav>
+		</header>
+	</section>
+	<section id="content">
+		<div class="row">
+			<div class="col-12">
+				<div class="col-2 fechaBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+				</div>
+				<div class="col-2 fechaBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<div id="fechaEvent" style="height:100%; background-color:lightblue;" draggable="true"
+ondragstart="drag(event)">
+						<div><p style="text-align:center;">Fecha: 17/3</p></div>
+						<img src="images/natty.jpg" style="width:100%; height:auto">
+					</div>
+				</div>
+				<div class="col-1"><button><b style="font-size:120%">+</b></button></div>
+			</div>
+		</div>
+	</section>
+	<footer></footer>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</body>
+</html>
