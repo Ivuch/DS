@@ -1,0 +1,128 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+body{
+	margin: 0;
+	padding: 0;
+}
+li h1{
+	background-color: #ff521e;
+}
+header{
+	box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
+}
+	</style>
+	<style>
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+	<table style="margin:45px;">
+		<tr>
+			<th>Banda Conocida</th>
+			<th>Lugar que mueve Gente</th>
+			<th>Arreglo Nuestro</th>
+		</tr>
+		<tr>
+			<td><b style="color:red">X</b></td>
+			<td><b style="color:red">X</b></td>
+			<td>$0 y 70% - 30% en entradas vendidas</td>
+		</tr>
+		<tr>
+			<td><b style="color:red">X</b></td>
+			<td><b style="color:green">v</b></td>
+			<td>Hasta $1000 y 70% - 30% en entradas</td>
+		</tr>
+		<tr>
+			<td><b style="color:green">v</b></td>
+			<td><b style="color:green">v</b></td>
+			<td>Hasta $2500 + (70% - 30%)</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<br>
+	<hr>
+	<br>
+	<pre>
+Requerimientos DHARMA SHALA's Web :
+
+1) Objeto Tocata:
+
+	*Fecha de la Tocata
+	*Prints de pantalla
+	*Ubicación del lugar (Google maps)
+	*link a tabla de arreglos 
+	*horario en que tocamos
+	*Otras Bandas
+	*Orden de las Bandas
+
+	Tocata:
+
+	{
+		id: ID_OBJ,
+		fecha: Date,
+		img: BLOB,
+		direccion: String,
+		horario: Date,
+	}
+
+
+
+
+2)Objeto tabla de arreglos:
+
+	*Agregar columna "Tocata" : agregar tocata (fecha, evento) en el row correspondiente al arreglo correspondiente.
+			Algo asi como: UPDATE my_arreglos_table SET tocata = %tocata_id% WHERE arreglo_column = '$0' ('Hasta $1000' ó 'Hasta $2500') 
+
+	*Columnas:
+
+		TIPO_ARREGLO
+			1
+			2
+			3
+
+
+Tabla "Arreglo_x_Tocata" :
+
+	*ID_TOCATA
+	*FECHA_TOCATA
+	*NOMBRE_FANTASIA (Ej:"con RIDDIM en Lithium, con Natty Combo en XLR San Miguel")
+	*TIPO_ARREGLO
+	*TOTAL_A_PAGAR
+	*EN_CONCEPTO_DE (Ej: "Sonidista, 'Derecho de piso', Mínimo de Entradas")
+	*CALLE
+	*ZONA
+	*CIUDAD
+	*PROVINCIA
+	*HORARIO_A_TOCAR
+	
+
+
+
+
+	Cada * representa una columna  y cada #) una Tabla
+
+	</pre>
+</body>
+</html>
